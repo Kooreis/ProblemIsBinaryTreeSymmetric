@@ -1,15 +1,11 @@
-using System;
-
-public class Node
+public class Program
 {
-    public int Value;
-    public Node Left;
-    public Node Right;
-
-    public Node(int value, Node left = null, Node right = null)
+    public static void Main()
     {
-        Value = value;
-        Left = left;
-        Right = right;
+        Node tree = new Node(1, 
+            new Node(2, new Node(3), new Node(4)), 
+            new Node(2, new Node(4), new Node(3)));
+
+        Console.WriteLine(IsSymmetric(tree));
     }
 }
